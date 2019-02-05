@@ -36,8 +36,11 @@ export default class EditableTimer extends React.Component {
       project,
       elapsed,
       isRunning,
-      onRemovePress
+      onRemovePress,
+      onStartPress,
+      onStopPress
     } = this.props;
+
     const { editFormOpen } = this.state;
 
     if (editFormOpen) {
@@ -60,6 +63,8 @@ export default class EditableTimer extends React.Component {
         isRunning={isRunning}
         onEditPress={this.handleEditPress}
         onRemovePress={onRemovePress}
+        onStartPress={onStartPress}
+        onStopPress={onStopPress}
       />
     );
   }
